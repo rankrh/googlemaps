@@ -15,7 +15,7 @@ KEY = os.environ.get('GOOGLE_API_KEY')
 ctx = ssl.create_default_context()
 
 
-def GeoDecode(location, output_format='json', language=''):
+def GeoCode(location, output_format='json', language=''):
     location = location.replace(' ', '+')
     
     URL_EXTENSION = 'maps/api/geocode/'
