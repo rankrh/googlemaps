@@ -23,7 +23,7 @@ def GeoCode(location, output_format='json', language=''):
     url += '?address=' + location
     url += '&key=' + KEY
     
-    data = json.loads(urlopen(url, context=ctx).read().decode('utf-8'))
+    data = json.loads(urlopen(url, context=ctx).read())
     lat = data['results'][0]['geometry']['location']['lat']
     long = data['results'][0]['geometry']['location']['lng']
     return (lat, long)
